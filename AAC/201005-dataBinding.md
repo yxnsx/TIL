@@ -14,7 +14,7 @@
 ### :sparkles: DataBinding 지원 조건
 * Android 4.0(API 레벨 14) 이상을 실행하는 기기
 * Android Gradle Plugin 1.5.0 이상 <br>
-<sub>- build.gradle(Project)의 dependencies에 정의되어 있음</sub>
+<sub>* build.gradle(Project)의 dependencies에 정의되어 있음</sub>
 <br>
 
 ### :sparkles: DataBinding 사용을 위한 환경 구축
@@ -88,7 +88,7 @@ android {
 
 * 레이아웃 xml 파일에 Data Binding을 적용하면 각 레이아웃 파일에 대해 바인딩 클래스가 생성된다.
 * 생성되는 바인딩 클래스의 이름은 'Pascal 표기법으로 변환된 xml 파일의 이름' + 'Binding'이다. <br>
-<sub>`activity_main.xml` -> `ActivityMainBinding`</sub>
+<sub>* `activity_main.xml` -> `ActivityMainBinding`</sub>
 * 레이아웃 컴포넌트에 변수를 할당하지 않고, findViewById()의 호출을 대체하는 용도로만 사용할 경우엔 <br>
 Data Binding 대신 View Binding을 사용하는 것이 권장된다.
 <br>
