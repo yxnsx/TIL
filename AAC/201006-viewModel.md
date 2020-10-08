@@ -1,16 +1,16 @@
-# :fire: View Model
+# :fire: ViewModel
 수명주기를 고려하여 UI 관련 데이터를 저장하고 관리하도록 설계된 <br>
 `Android Jetpack`의 라이브러리이다.<br>
 액티비티 및 프래그먼트와 같은 UI 컨트롤러가 살아있는 동안 유지된다. <br>
 <br>
 
-### :sparkles: View Model 사용의 장점
+### :sparkles: ViewModel 사용의 장점
 * UI 컨트롤러의 책임을 분리할 수 있다.
 * 화면 회전과 같은 UI 구성 변경이 일어나도 데이터를 보존할 수 있다.
 * UI 구성 변경시 객체를 다시 생성할 필요가 없으므로 리소스 낭비를 줄일 수 있다.
 <br>
 
-### :sparkles: View Model 사용을 위한 환경 구축
+### :sparkles: ViewModel 사용을 위한 환경 구축
 * build.gradle(Module: app)에서 jvmTarget 및 종속성 선언 추가
 ```xml
 android {
@@ -39,9 +39,9 @@ dependencies {
 ```
 <br>
 
-### :sparkles: View Model 구현 방법
+### :sparkles: ViewModel 구현 방법
 1. ViewModel 클래스를 생성한 후 데이터 및 관련 함수(메소드)를 선언한다. <br>
-<sub>- ViewModel은 view, lifeCycle, context 등에 대한 참조를 보유할 수 있는 클래스를 참조해서는 안됨</sub>
+<sub>* ViewModel은 view, lifeCycle, context 등에 대한 참조를 보유할 수 있는 클래스를 참조해서는 안됨</sub>
   ```kotlin
 class MyViewModel : ViewModel() {
 
