@@ -170,5 +170,16 @@ let integerPi = Int(pi) // Double -> Int 변환
 ```
 <br>
 
+### :sparkles: Type Aliases
+* 타입 별칭은 기존 타입의 대체 이름을 정의한다.
+* 상황에 따라 더 적절한 이름으로 기존 유형을 참조하는 경우 유용하다.
+* 타입 별칭을 정의하면 원래의 이름을 사용할 수 있는 모든 곳에서 별칭을 사용할 수 있다.
+```swift
+typealias AudioSample = UInt16
+var maxAmplitudeFound = AudioSample.min
+```
+<br>
+
+
 ### :memo: Reference
 * https://kotlinlang.org/docs/reference/basic-syntax.html
