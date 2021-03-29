@@ -116,9 +116,9 @@ let maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8
 ### :sparkles: Numeric Literals
 * 정수 리터럴은 다음과 같이 작성할 수 있다.
   * 10진법 숫자 - 접두어 필요 없음
-  * 2진법 숫자 - 0b 접두어 필요
-  * 8진법 숫자 - 0o 접두어 필요
-  * 16진법 숫자 - 0x 접두어 필요
+  * 2진법 숫자 - `0b` 접두어 필요
+  * 8진법 숫자 - `0o` 접두어 필요
+  * 16진법 숫자 - `0x` 접두어 필요
 ```swift
 let decimalInteger = 17
 let binaryInteger = 0b10001   // 2진법으로 나타낸 17
@@ -131,7 +131,7 @@ let hexadecimalInteger = 0x11 // 16진법으로 나타낸 17
   * 10진법 숫자 (10<sup>exp</sup>씩 곱함)
     * 1.25e2 = 1.25 x 10<sup>2</sup> = 125.0
     * 1.25e-2 = 1.25 x 10<sup>-2</sup> = 0.0125
-  * 2진법 숫자
+  * 2진법 숫자 (2<sup>exp</sup>씩 곱함)
     * 0xFp2 = 15 x 2<sup>2</sup> = 60.0
     * 0xFp-2 = 15 x 2<sup>-2</sup> = 3.75
 ```swift
@@ -182,4 +182,4 @@ var maxAmplitudeFound = AudioSample.min
 
 
 ### :memo: Reference
-* https://kotlinlang.org/docs/reference/basic-syntax.html
+* https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
