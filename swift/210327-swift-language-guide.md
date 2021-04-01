@@ -180,6 +180,75 @@ var maxAmplitudeFound = AudioSample.min
 ```
 <br>
 
+### :sparkles: Booleans
+* Boolean 값은 `true` 또는 `false`만 될 수 있는 logical 값이다.
+* 이러한 Boolean 값은 if와 같은 조건문으로 작업할 때 특히 유용하게 활용할 수 있다.
+```swift
+let orangesAreOrange = true
+let turnipsAreDelicious = false
+
+if turnipsAreDelicious {
+    print("Mmm, tasty turnips!")
+} else {
+    print("Eww, turnips are horrible.")
+}
+```
+<br>
+
+### :sparkles: Tuples
+* 튜플은 여러 값을 단일 복합 값으로 그룹화한다.
+* 튜플은 반환 값이 여러 개인 함수에서 특히 유용하게 사용할 수 있다.
+* 튜플 내의 값은 모든 유형이 될 수 있으며, 서로 동일한 유형일 필요는 없다.
+```swift
+let http404Error = (404, "Not Found")
+// http404Error is of type (Int, String), and equals (404, "Not Found")
+```
+<br>
+
+* 튜플 내의 값은 각각의 상수 또는 변수로 분해할 수 있으며, 다음과 같은 방법으로 각각에 접근할 수 있다.
+```swift
+let (statusCode, statusMessage) = http404Error
+
+// Prints "The status code is 404"
+print("The status code is \(statusCode)")
+
+// Prints "The status message is Not Found"
+print("The status message is \(statusMessage)")
+```
+<br>
+
+* 튜플 내의 값 중 일부만 필요할 경우, 언더스코어(`_`)를 이용하여 불필요한 부분을 무시할 수 있다.
+```swift
+let (justTheStatusCode, _) = http404Error
+
+// Prints "The status code is 404"
+print("The status code is \(justTheStatusCode)")
+```
+<br>
+
+* 0부터 시작하는 인덱스를 통해 튜플 내의 각 값에 접근할 수도 있다.
+```swift
+// Prints "The status code is 404"
+print("The status code is \(http404Error.0)")
+
+// Prints "The status message is Not Found"
+print("The status message is \(http404Error.1)")
+```
+<br>
+
+* 튜플을 정의할 시, 튜플 내의 각 값에 이름을 지정할 수 있다.
+* 튜플 내의 각 값에 이름을 지정한 경우, 해당 값에 접근하기 위해 지정한 이름을 이용할 수 있다.
+```swift
+let http200Status = (statusCode: 200, description: "OK")
+
+// Prints "The status code is 200"
+print("The status code is \(http200Status.statusCode)")
+
+// Prints "The status message is OK"
+print("The status message is \(http200Status.description)")
+```
+<br>
+
 
 ### :memo: Reference
 * https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
