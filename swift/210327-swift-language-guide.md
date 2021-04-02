@@ -249,6 +249,60 @@ print("The status message is \(http200Status.description)")
 ```
 <br>
 
+### :sparkles: Optionals
+* 값이 없을 수 있는 상황에서 Optionals를 사용할 수 있다.
+* Optional은 두 가지 상태를 나타낼 수 있다.
+  * 값이 있고, 그 값에 접근하기 위해 Optional을 해제할 수 있는 상태
+  * 값이 없는 상태
+* 스위프트의 Optional은 특별한 상수 없이 어떤 타입에도 값이 없음을 나타낼 수 있게 한다.
+<br>
+
+```swift
+let possibleNumber = "123"
+let convertedNumber = Int(possibleNumber)
+// convertedNumber is inferred to be of type "Int?", or "optional Int"
+```
+* 위의 예시에서 `possibleNumber`의 값으로 "Hello, world"등이 지정될 수 있다.
+* 이 때, `convertedNumber`에서의 `Int(possibleNumber)` 변환은 실패할 수 있다.
+* 이러한 경우를 위해 `convertedNumber`의 값은 `Int?` 또는 `optional Int`로 추론된다.
+<br>
+
+* nil
+  * 값이 없는 상태에 nil이라는 특정한 값을 할당하여 optional 변수로 지정할 수 있다.
+  * 기본값을 지정하지 않고 optional 변수를 정의할 경우, 변수는 자동으로 nil 값으로 설정된다.
+```swift
+var serverResponseCode: Int? = 404
+// serverResponseCode contains an actual Int value of 404
+serverResponseCode = nil
+// serverResponseCode now contains no value
+
+var surveyAnswer: String?
+// surveyAnswer is automatically set to nil
+```
+<br>
+
+* If Statements and Forced Unwrapping
+  * if문으로 `optinal`과 `nil` 값을 비교해서 `optinal`이 값을 지니고 있는지 알아낼 수 있다.
+```swift
+if convertedNumber != nil {
+    print("convertedNumber has an integer value of \(convertedNumber!).")
+}
+// Prints "convertedNumber has an integer value of 123."
+```
+<br>
+
+* Optional Binding
+  * optional binding을 통해 `optinal`이 값을 지니고 있는지 알아낼 수 있다.
+  * 값이 존재할 경우, 해당 값을 상수 또는 변수로 사용할 수 있다.
+```swift
+if let actualNumber = Int(possibleNumber) {
+    print("The string \"\(possibleNumber)\" has an integer value of \(actualNumber)")
+} else {
+    print("The string \"\(possibleNumber)\" couldn't be converted to an integer")
+}
+// Prints "The string "123" has an integer value of 123"
+```
+<br>
 
 ### :memo: Reference
 * https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
