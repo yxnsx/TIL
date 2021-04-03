@@ -250,8 +250,8 @@ print("The status message is \(http200Status.description)")
 <br>
 
 ### :sparkles: Optionals
-* 값이 없을 수 있는 상황에서 Optionals를 사용할 수 있다.
-* Optional은 두 가지 상태를 나타낼 수 있다.
+* `optinal`은 상수 또는 변수가 "값이 없음"을 지닐 수 있음을 나타낸다.
+* `optinal`은 두 가지 상태를 나타낼 수 있다.
   * 값이 있고, 그 값에 접근하기 위해 Optional을 해제할 수 있는 상태
   * 값이 없는 상태
 * 스위프트의 Optional은 특별한 상수 없이 어떤 타입에도 값이 없음을 나타낼 수 있게 한다.
@@ -271,23 +271,24 @@ let convertedNumber = Int(possibleNumber)
   * 값이 없는 상태에 nil이라는 특정한 값을 할당하여 optional 변수로 지정할 수 있다.
   * 기본값을 지정하지 않고 optional 변수를 정의할 경우, 변수는 자동으로 nil 값으로 설정된다.
 ```swift
-var serverResponseCode: Int? = 404
 // serverResponseCode contains an actual Int value of 404
-serverResponseCode = nil
-// serverResponseCode now contains no value
+var serverResponseCode: Int? = 404
 
-var surveyAnswer: String?
+// serverResponseCode now contains no value
+serverResponseCode = nil
+
 // surveyAnswer is automatically set to nil
+var surveyAnswer: String?
 ```
 <br>
 
 * If Statements and Forced Unwrapping
   * if문으로 `optinal`과 `nil` 값을 비교해서 `optinal`이 값을 지니고 있는지 알아낼 수 있다.
 ```swift
+// Prints "convertedNumber has an integer value of 123."
 if convertedNumber != nil {
     print("convertedNumber has an integer value of \(convertedNumber!).")
 }
-// Prints "convertedNumber has an integer value of 123."
 ```
 <br>
 
@@ -302,7 +303,64 @@ if let actualNumber = Int(possibleNumber) {
 }
 // Prints "The string "123" has an integer value of 123"
 ```
+
+* Implicitly Unwrapped Optionals
+  * `optinal` 값이 항상 값을 지니고 있다고 가정할 수 있는 경우, 해당 값에 액세스 할 때마다 값의 유무를 확인할 필요가 없다.
+  * `optinal`로 선언된 변수 사용시, 해당 변수명 뒤에 느낌표를 넣어 항상 값을 지니고 있음을 나타낼 수 있다.
+  * 해당 변수 선언시, 자료형 뒤에 느낌표를 넣어 항상 값을 지니고 있음을 나타낼 수 있다.
+```swift
+let possibleString: String? = "An optional string."
+let forcedString: String = possibleString! // requires an exclamation point
+
+let assumedString: String! = "An implicitly unwrapped optional string."
+let implicitString: String = assumedString // no need for an exclamation point
+```
 <br>
+
+### :sparkles: Error Handling
+* 실행 중 프로그램에서 나타나는 문제의 에러 상황에 따라 응답할 때 사용한다.
+* 에러 처리는 내재하는 실패 원인을 판별하고, 필요한 경우 프로그램의 다른 부분으로 해당 에러를 전파할 수 있다.
+* 에러 상황을 마주한 함수는 에러를 `throws`하고, 해당 함수의 호출자는 에러를 잡아내고 적절하게 응답할 수 있다.
+* 이러한 함수는 에러를 `throws`할 수 있다는 것을 나타내기 위해 `throws` 키워드를 포함해야 한다.
+```swift
+func canThrowAnError() throws {
+    // this function may or may not throw an error
+}
+```
+<br>
+
+* swift는 `catch`절에 의해 처리될 때까지 해당 범위 내에서 자동으로 에러를 전파한다.
+* `do`문은 에러를 하나 이상의 `catch`절로 전파하는 새 구간을 생성한다.
+```swift
+do {
+    try canThrowAnError()
+    // no error was thrown
+} catch {
+    // an error was thrown
+}
+```
+<br>
+
+* 아래의 예에서 `makeASandwich()` 함수는 깨끗한 접시가 없을 경우 또는 재료가 빠졌을 경우 에러를 발생시킨다.
+* `do`문으로 감싸인 함수 호출에서는 어떠한 에러라도 `catch`절로 전파된다.
+* 아무런 에러도 발생하지 않았을 경우,`eatASandwich()` 함수가 호출된다.
+* 에러가 발생했고 해당 에러가 `SandwichError.outOfCleanDishes`와 일치할 경우, `washDishes()` 함수가 호출된다.
+* 에러가 발생했고 해당 에러가 `SandwichError.missingIngredients`와 일치할 경우, `catch` 패턴에 의해 캡쳐된 `[String]` 값과 함께 `buyGroceries(_:)` 함수가 호출된다.
+```swift
+func makeASandwich() throws {
+    // ...
+}
+
+do {
+    try makeASandwich()
+    eatASandwich()
+} catch SandwichError.outOfCleanDishes {
+    washDishes()
+} catch SandwichError.missingIngredients(let ingredients) {
+    buyGroceries(ingredients)
+}
+```
+
 
 ### :memo: Reference
 * https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
