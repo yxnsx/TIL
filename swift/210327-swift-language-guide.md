@@ -85,25 +85,25 @@ let cat = "🐱"; print(cat)
 <br>
 
 ### :sparkles: Integers
-* Integer Bounds
-  * Swift는 8, 16, 32, 64-bit 형식으로 정수를 제공한다.
-  * `min` 및 `max` 속성을 사용하여 각 정수 유형의 최솟값과 최댓값에 접근할 수 있다.
+#### :heavy_check_mark: Integer Bounds
+* Swift는 8, 16, 32, 64-bit 형식으로 정수를 제공한다.
+* `min` 및 `max` 속성을 사용하여 각 정수 유형의 최솟값과 최댓값에 접근할 수 있다.
 ```swift
 let minValue = UInt8.min  // minValue is equal to 0, and is of type UInt8
 let maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8
 ```
 <br>
 
-* Int
-  * 명시적으로 크기가 지정된 데이터 사용 또는 성능, 메모리 사용량 등 최적화를 위한 작업 등 특별한 경우가 아니라면 Int 정수값을 사용한다.
-  * 32-bit 플랫폼에서의 Int size = `Int32`
-  * 64-bit 플랫폼에서의 Int size = `Int64`
+#### :heavy_check_mark: Int
+* 명시적으로 크기가 지정된 데이터 사용 또는 성능, 메모리 사용량 등 최적화를 위한 작업 등 특별한 경우가 아니라면 Int 정수값을 사용한다.
+* 32-bit 플랫폼에서의 Int size = `Int32`
+* 64-bit 플랫폼에서의 Int size = `Int64`
 <br>
 
-* UInt
-  * 부호 없는 정수 유형(0, 양수)만 제공한다.
-  * 32-bit 플랫폼에서의 UInt size = `UInt32`
-  * 64-bit 플랫폼에서의 UInt size = `UInt64`
+#### :heavy_check_mark: UInt
+* 부호 없는 정수 유형(0, 양수)만 제공한다.
+* 32-bit 플랫폼에서의 UInt size = `UInt32`
+* 64-bit 플랫폼에서의 UInt size = `UInt64`
 <br>
 
 ### :sparkles: Floating-Point Numbers
@@ -152,8 +152,8 @@ let justOverOneMillion = 1_000_000.000_000_1
 <br>
 
 ### :sparkles: Numeric Type Conversion
-* Integer Conversion
-  * 상수 또는 변수에 저장할 수 있는 숫자의 범위는 타입마다 다르기 때문에 타입 변환이 필요하다.
+#### :heavy_check_mark: Integer Conversion
+* 상수 또는 변수에 저장할 수 있는 숫자의 범위는 타입마다 다르기 때문에 타입 변환이 필요하다.
 ```swift
 let twoThousand: UInt16 = 2_000
 let one: UInt8 = 1
@@ -161,7 +161,7 @@ let twoThousandAndOne = twoThousand + UInt16(one)
 ```
 <br>
 
-* Integer and Floating-Point Conversion
+#### :heavy_check_mark: Integer and Floating-Point Conversion
 ```swift
 let three = 3
 let pointOneFourOneFiveNine = 0.14159
@@ -254,7 +254,7 @@ print("The status message is \(http200Status.description)")
 * `optinal`은 두 가지 상태를 나타낼 수 있다.
   * 값이 있고, 그 값에 접근하기 위해 Optional을 해제할 수 있는 상태
   * 값이 없는 상태
-* 스위프트의 Optional은 특별한 상수 없이 어떤 타입에도 값이 없음을 나타낼 수 있게 한다.
+* 스위프트의 `optinal`은 특별한 상수 없이 어떤 타입에도 값이 없음을 나타낼 수 있게 한다.
 <br>
 
 ```swift
@@ -267,9 +267,9 @@ let convertedNumber = Int(possibleNumber)
 * 이러한 경우를 위해 `convertedNumber`의 값은 `Int?` 또는 `optional Int`로 추론된다.
 <br>
 
-* nil
-  * 값이 없는 상태에 nil이라는 특정한 값을 할당하여 optional 변수로 지정할 수 있다.
-  * 기본값을 지정하지 않고 optional 변수를 정의할 경우, 변수는 자동으로 nil 값으로 설정된다.
+#### :heavy_check_mark: nil
+* 값이 없는 상태에 `nil`이라는 특정한 값을 할당하여 optional 변수로 지정할 수 있다.
+* 기본값을 지정하지 않고 `optional` 변수를 정의할 경우, 변수는 자동으로 `nil` 값으로 설정된다.
 ```swift
 // serverResponseCode contains an actual Int value of 404
 var serverResponseCode: Int? = 404
@@ -282,19 +282,19 @@ var surveyAnswer: String?
 ```
 <br>
 
-* If Statements and Forced Unwrapping
-  * if문으로 `optinal`과 `nil` 값을 비교해서 `optinal`이 값을 지니고 있는지 알아낼 수 있다.
+#### :heavy_check_mark: If Statements and Forced Unwrapping
+* if문으로 `optinal`과 `nil` 값을 비교해서 `optinal`이 값을 지니고 있는지 알아낼 수 있다.
 ```swift
-// Prints "convertedNumber has an integer value of 123."
 if convertedNumber != nil {
     print("convertedNumber has an integer value of \(convertedNumber!).")
 }
+// Prints "convertedNumber has an integer value of 123."
 ```
 <br>
 
-* Optional Binding
-  * optional binding을 통해 `optinal`이 값을 지니고 있는지 알아낼 수 있다.
-  * 값이 존재할 경우, 해당 값을 상수 또는 변수로 사용할 수 있다.
+#### :heavy_check_mark: Optional Binding
+* optional binding을 통해 `optinal`이 값을 지니고 있는지 알아낼 수 있다.
+* 값이 존재할 경우, 해당 값을 상수 또는 변수로 사용할 수 있다.
 ```swift
 if let actualNumber = Int(possibleNumber) {
     print("The string \"\(possibleNumber)\" has an integer value of \(actualNumber)")
@@ -304,10 +304,10 @@ if let actualNumber = Int(possibleNumber) {
 // Prints "The string "123" has an integer value of 123"
 ```
 
-* Implicitly Unwrapped Optionals
-  * `optinal` 값이 항상 값을 지니고 있다고 가정할 수 있는 경우, 해당 값에 액세스 할 때마다 값의 유무를 확인할 필요가 없다.
-  * `optinal`로 선언된 변수 사용시, 해당 변수명 뒤에 느낌표를 넣어 항상 값을 지니고 있음을 나타낼 수 있다.
-  * 해당 변수 선언시, 자료형 뒤에 느낌표를 넣어 항상 값을 지니고 있음을 나타낼 수 있다.
+#### :heavy_check_mark: Implicitly Unwrapped Optionals
+* `optinal` 값이 항상 값을 지니고 있다고 가정할 수 있는 경우, 해당 값에 액세스 할 때마다 값의 유무를 확인할 필요가 없다.
+* `optinal`로 선언된 변수 사용시, 해당 변수명 뒤에 느낌표를 넣어 항상 값을 지니고 있음을 나타낼 수 있다.
+* 해당 변수 선언시, 자료형 뒤에 느낌표를 넣어 항상 값을 지니고 있음을 나타낼 수 있다.
 ```swift
 let possibleString: String? = "An optional string."
 let forcedString: String = possibleString! // requires an exclamation point
@@ -319,7 +319,7 @@ let implicitString: String = assumedString // no need for an exclamation point
 
 ### :sparkles: Error Handling
 * 실행 중 프로그램에서 나타나는 문제의 에러 상황에 따라 응답할 때 사용한다.
-* 에러 처리는 내재하는 실패 원인을 판별하고, 필요한 경우 프로그램의 다른 부분으로 해당 에러를 전파할 수 있다.
+* 에러 처리는 내재하는 실패 원인을 판별하고, 필요한 경우 프로그램의 다른 부분으로 해당 에러를 전달할 수 있다.
 * 에러 상황을 마주한 함수는 에러를 `throws`하고, 해당 함수의 호출자는 에러를 잡아내고 적절하게 응답할 수 있다.
 * 이러한 함수는 에러를 `throws`할 수 있다는 것을 나타내기 위해 `throws` 키워드를 포함해야 한다.
 ```swift
@@ -329,7 +329,7 @@ func canThrowAnError() throws {
 ```
 <br>
 
-* swift는 `catch`절에 의해 처리될 때까지 해당 범위 내에서 자동으로 에러를 전파한다.
+* swift는 `catch`절에 의해 처리될 때까지 해당 범위 내에서 자동으로 에러를 전달한다.
 * `do`문은 에러를 하나 이상의 `catch`절로 전파하는 새 구간을 생성한다.
 ```swift
 do {
@@ -341,11 +341,6 @@ do {
 ```
 <br>
 
-* 아래의 예에서 `makeASandwich()` 함수는 깨끗한 접시가 없을 경우 또는 재료가 빠졌을 경우 에러를 발생시킨다.
-* `do`문으로 감싸인 함수 호출에서는 어떠한 에러라도 `catch`절로 전파된다.
-* 아무런 에러도 발생하지 않았을 경우,`eatASandwich()` 함수가 호출된다.
-* 에러가 발생했고 해당 에러가 `SandwichError.outOfCleanDishes`와 일치할 경우, `washDishes()` 함수가 호출된다.
-* 에러가 발생했고 해당 에러가 `SandwichError.missingIngredients`와 일치할 경우, `catch` 패턴에 의해 캡쳐된 `[String]` 값과 함께 `buyGroceries(_:)` 함수가 호출된다.
 ```swift
 func makeASandwich() throws {
     // ...
@@ -360,7 +355,56 @@ do {
     buyGroceries(ingredients)
 }
 ```
+* 위의 예에서 `makeASandwich()` 함수는 깨끗한 접시가 없을 경우 또는 재료가 빠졌을 경우 에러를 발생시킨다.
+* 아무런 에러도 발생하지 않았을 경우,`eatASandwich()` 함수가 호출된다.
+* `do`문으로 감싸인 함수 호출에서는 어떠한 에러라도 `catch`절로 전달된다.
+* 에러가 발생했고 해당 에러가 `SandwichError.outOfCleanDishes`와 일치할 경우, `washDishes()` 함수가 호출된다.
+* 에러가 발생했고 해당 에러가 `SandwichError.missingIngredients`와 일치할 경우, `catch` 패턴에 의해 캡쳐된 `[String]` 값과 함께 `buyGroceries(_:)` 함수가 호출된다.
+<br>
 
+### :sparkles: Assertions and Preconditions
+#### :heavy_check_mark: Debugging with Assertions
+* swift의 표준 라이브러리에서 `assert(_:_:file:line:)`를 호출하여 assertion을 작성할 수 있다.
+* 결과가 `true`일 경우, 코드 실행이 계속된다.
+* 결과가 `false`일 경우, assertion에 실패하여 프로그램이 종료된다.
+* `true` 또는 `false`를 판별할 수 있는 표현식과 결과가 `false`일 경우 보여질 메시지를 이 함수에 전달한다.
+```swift
+let age = -3
+assert(age >= 0, "A person's age can't be less than zero.")
+// This assertion fails because -3 isn't >= 0.
+```
+<br> 
+
+* 단순히 조건만을 반복할 경우에는 메시지를 생략할 수 있다.
+```swift
+assert(age >= 0)
+```
+<br> 
+
+* 조건을 이미 확인한 경우, `assertionFailure(_:file:line:)`함수를 호출하여 assertion이 실패했는지 알릴 수 있다.
+```
+if age > 10 {
+    print("You can ride the roller-coaster or the ferris wheel.")
+} else if age >= 0 {
+    print("You can ride the ferris wheel.")
+} else {
+    assertionFailure("A person's age can't be less than zero.")
+}
+```
+<br>
+
+#### :heavy_check_mark: Enforcing Preconditions
+* 조건이 `false`가 될 가능성이 있을 경우 precondition을 사용하지만, 코드가 계속 실행되기 위해서는 반드시 `true`여야 한다.
+* 어떠한 값이 범위를 벗어나지는 않는지, 함수에 유효한 값이 전달되는지를 체크하기 위해 precondition을 사용한다.
+* ` precondition(_:_:file:line:)` 함수를 호출하여 precondition을 작성할 수 있다.
+* `true` 또는 `false`를 판별할 수 있는 표현식과 결과가 `false`일 경우 보여질 메시지를 이 함수에 전달한다.
+* `preconditionFailure(_:file:line:)`함수를 호출하여 precondition이 실패했는지 알릴 수 있다.
+```swift
+let age = -3
+assert(age >= 0, "A person's age can't be less than zero.")
+// This assertion fails because -3 isn't >= 0.
+```
+<br>
 
 ### :memo: Reference
 * https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
