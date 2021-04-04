@@ -1,4 +1,4 @@
-# :fire: Swift Language Guide
+# :fire: Swift - The Basics
 <br>
 
 ### :sparkles: Constants and Variables
