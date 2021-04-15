@@ -423,5 +423,5 @@ assert(age >= 0, "A person's age can't be less than zero.")
 <br>
 
 ---
-#### 📝 Reference
+### 📝 References
 * https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
