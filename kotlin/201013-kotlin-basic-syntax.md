@@ -1,7 +1,8 @@
-# :fire: Kotlin Basic Syntax
+## 🔥 Kotlin Basic Syntax
 <br>
 
-### :sparkles: Package definition and imports
+---
+### ✨ Package definition and imports
 * 패키지 사양은 소스파일의 맨 위에 위치해야 한다.
 ```kotlin
 package my.demo
@@ -10,7 +11,8 @@ import kotlin.text.*
 ```
 <br>
 
-### :sparkles: Program entry point
+---
+### ✨ Program entry point
 * `Kotlin` 애플리케이션의 진입점은 `main` 함수이다.
 ```kotlin
 fun main() {
@@ -19,7 +21,8 @@ fun main() {
 ```
 <br>
 
-### :sparkles: Functions
+---
+### ✨ Functions
 * 두개의 `Int` 매개변수와 `Int` 리턴 타입이 있는 함수
 ```kotlin
 fun sum(a: Int, b: Int): Int {
@@ -47,7 +50,8 @@ fun printSum(a: Int, b: Int) {
 ```
 <br>
 
-### :sparkles: Variables
+---
+### ✨ Variables
 * 읽기 전용 지역 변수는 `val`을 사용하여 정의하며, 값은 한 번만 할당할 수 있다.
 ```kotlin
 val a: Int = 1  // 값 즉시 할당
@@ -75,7 +79,8 @@ fun incrementX() {
 ```
 <br>
 
-### :sparkles: Comments
+---
+### ✨ Comments
 * `Kotlin`은 한 줄 및 여러 줄(블록) 주석을 지원한다.
 ```kotlin
 // This is an end-of-line comment
@@ -93,7 +98,8 @@ and ends here. */
 ```
 <br>
 
-### :sparkles: String templates
+---
+### ✨ String templates
 * 문자열 리터럴에는 결과가 문자열에 반영되는 코드 조각인 템플릿 표현식이 포함될 수 있다.
 * 템플릿 표현식은 달러 사인(`$`)으로 시작된다.
 ```kotlin
@@ -105,7 +111,8 @@ println("$s.length is ${s.length}") // prints "abc.length is 3"
 ```
 <br>
 
-### :sparkles: Conditional expressions
+---
+### ✨ Conditional expressions
 ```kotlin
 fun maxOf(a: Int, b: Int): Int {
     if (a > b) {
@@ -120,8 +127,9 @@ fun maxOf(a: Int, b: Int) = if (a > b) a else b
 ```
 <br>
 
-### :sparkles: Nullable values and null checks
-* `null` 값이 가능한 경우 반드시 `nullable(?)`을 명시적으로 표시해주어야 한다.
+---
+### ✨ Nullable values and null checks
+* `null` 값이 가능한 경우 반드시 nullable(`?`)을 명시적으로 표시해주어야 한다.
 ```kotlin
 // str이 Int를 지니고 있지 않을 경우 null을 반환
 fun parseInt(str: String): Int? {
@@ -167,7 +175,8 @@ fun printProduct(arg1: String, arg2: String) {
 ```
 <br>
 
-### :sparkles: Type checks and automatic casts
+---
+### ✨ Type checks and automatic casts
 * `is` 연산자는 표현식이 타입에 해당하는지 체크한다.
 * 변경 불가능한 지역 변수 또는 속성이 특정 타입에 대해 확인된 경우는 타입을 명시할 필요가 없다.
 ```kotlin
@@ -191,7 +200,8 @@ fun getStringLength(obj: Any): Int? {
 ```
 <br>
 
-### :sparkles: for loop
+---
+### ✨ for loop
 ```kotlin
 val items = listOf("apple", "banana", "kiwifruit")
 for (item in items) {
@@ -206,7 +216,8 @@ for (index in items.indices) {
 ```
 <br>
 
-### :sparkles: while loop
+---
+### ✨ while loop
 ```kotlin
 val items = listOf("apple", "banana", "kiwifruit")
 var index = 0
@@ -217,7 +228,8 @@ while (index < items.size) {
 ```
 <br>
 
-### :sparkles: when expression
+---
+### ✨ when expression
 ```kotlin
 fun describe(obj: Any): String = when (obj) {
     1          -> "One"
@@ -229,7 +241,8 @@ fun describe(obj: Any): String = when (obj) {
 ```
 <br>
 
-### :sparkles: Ranges
+---
+### ✨ Ranges
 * `in` 연산자를 사용해 범위를 바탕으로 숫자를 체크할 수 있다.
 ```kotlin
 // 숫자가 범위 내에 있는 경우
@@ -256,7 +269,8 @@ for (x in 1..5) {
 ```
 <br>
 
-### :sparkles: Collections
+---
+### ✨ Collections
 * 컬렉션을 바탕으로 반복하기
 ```kotlin
 for (item in items) {
@@ -285,5 +299,6 @@ fruits
 ```
 <br>
 
-### :memo: Reference
+---
+### 📝 References
 * https://kotlinlang.org/docs/reference/basic-syntax.html
