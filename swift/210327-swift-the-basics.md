@@ -263,11 +263,11 @@ print("The status message is \(http200Status.description)")
 
 ---
 ### ✨ Optionals
-* `optinal`은 상수 또는 변수가 "값이 없음"을 지닐 수 있음을 나타낸다.
-* `optinal`은 두 가지 상태를 나타낼 수 있다.
+* `optional`은 상수 또는 변수가 "값이 없음"을 지닐 수 있음을 나타낸다.
+* `optional`은 두 가지 상태를 나타낼 수 있다.
   * 값이 있고, 그 값에 접근하기 위해 `optional`을 해제할 수 있는 상태
   * 값이 없는 상태
-* 스위프트의 `optinal`은 특별한 상수 없이 어떤 타입에도 값이 없음을 나타낼 수 있게 한다.
+* 스위프트의 `optional`은 특별한 상수 없이 어떤 타입에도 값이 없음을 나타낼 수 있게 한다.
 <br>
 
 ```swift
