@@ -1,17 +1,17 @@
-# :fire: LiveData
+# LiveData
 `Android Jetpack의 일부` <br><br>
 LiveData는 앱 구성 요소의 수명주기를 인식하고 <br>
 활성 수명주기 상태에 있는 앱 구성 요소의 observer만 업데이트하는 데이터 홀더 클래스이다. <br>
 <sub>* LiveData Observer는 수명주기가 `STARTED` 또는 `RESUMED` 상태인 경우 활성 상태로 간주함</sub><br>
 <br>
 
-### :sparkles: LiveData 사용의 장점
+### LiveData 사용의 장점
 * LiveData는 Observer pattern을 바탕으로 수명주기 상태 변경을 인식하고 자동으로 관리한다.
 * LiveData Observer는 Lifecycle 객체에 바인딩되며, 관련 수명주기가 파괴되면 스스로 정리하여 메모리 누수가 없다.
 * 수명주기가 비활성화 되었다가 다시 활성화 될 때 항상 최신 데이터를 수신한다.
 <br>
 
-### :sparkles: LiveData 구현 방법
+### LiveData 구현 방법
 1. ViewModel 클래스 내에 특정 데이터를 보관할 LiveData 객체를 생성한다.
 ```kotlin
 class NameViewModel : ViewModel() {
